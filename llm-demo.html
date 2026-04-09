@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo LLM Chat</title>
+  <link rel="stylesheet" href="llm-demo.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="panel settings">
+      <h1>Trợ lí của Thành đẹp zai</h1>
+      <p class="muted"></p>
+
+      <label for="apiBase">API Base URL</label>
+      <input id="apiBase" type="text" value="https://api.groq.com/openai/v1" />
+
+      <label for="apiKey">API Key</label>
+      <input id="apiKey" type="password" placeholder="Nhập API key của bạn: " />
+
+      <label for="model">Model</label>
+      <select id="model">
+        <option value="llama-3.1-8b-instant">llama-3.1-8b-instant</option>
+        <option value="llama-3.3-70b-versatile">llama-3.3-70b-versatile</option>
+        <option value="mixtral-8x7b-32768">mixtral-8x7b-32768</option>
+      </select>
+
+      <button id="saveConfigBtn" type="button">Lưu</button>
+    </aside>
+
+    <main class="panel chat">
+      <div class="chat-header">
+        <h2>Trợ lí Ảo Tèo</h2>
+        <span id="status" class="status">Sẵn sàng</span>
+      </div>
+
+      <div id="messages" class="messages"></div>
+
+      <form id="chatForm" class="chat-input">
+        <textarea id="prompt" rows="3" placeholder="Nhập câu hỏi..." required></textarea>
+        <div class="actions">
+          <button type="submit" id="sendBtn">Gửi</button>
+          <button type="button" id="clearBtn" class="secondary">Xóa hội thoại</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <script src="llm-demo.js"></script>
+</body>
+</html>
