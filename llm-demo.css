@@ -165,7 +165,10 @@ button:hover {
   .app {
     grid-template-columns: 1fr;
   }
-
+#saveConfigBtn{
+  display: block;
+  margin: 12px auto 0;
+}
   .chat {
     min-height: 65vh;
   }
